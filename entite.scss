@@ -1,0 +1,27 @@
+[Gymnase]
+  | GymnaseID (PK)
+  | Nom
+  | Adresse
+  | Téléphone
+    |
+    | (1,N)
+    |
+    | GymnaseID (FK)
+  [Séance]------(N,N)------[Membre]
+  | SéanceID (PK)           | MembreID (PK)
+  | TypeSport               | Nom
+  | Horaire                 | Prénom
+  | CapacitéMax             | Adresse
+                           | DateNaissance
+                           | Sexe
+
+      | (N,N)
+      |
+      | SéanceID (FK)
+      |
+  [Animation]-----(N,N)----[Coach]
+                        | CoachID (PK)
+                        | Nom
+                        | Prénom
+                        | Âge
+                        | Spécialité
